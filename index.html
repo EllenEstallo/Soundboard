@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Buttons</title>
+  </head>
+  <body>
+    <button id="youWinBtn">You Win!</button>
+    <button id="sorryBtn">Sorry!</button>
+
+    <audio
+      id="youWinSrc"
+      src="ta-da-brass-ensemble-fast-soundroll-1-00-01.mp3"
+    ></audio>
+    <audio
+      id="sorrySrc"
+      src="fail-muted-trumpet-tomas-herudek-low-2-00-05.mp3"
+    ></audio>
+
+    <script>
+      const youWinKey = document.getElementById("youWinBtn");
+      const sorryKey = document.getElementById("sorryBtn");
+      const youWinSound = document.getElementById("youWinSrc");
+      const sorrySound = document.getElementById("sorrySrc");
+
+      youWinKey.addEventListener("click", function () {
+        youWinSound.play();
+      });
+
+      sorryKey.addEventListener("click", function () {
+        sorrySound.play();
+      });
+    </script>
+  </body>
+</html>
